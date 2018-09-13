@@ -7,7 +7,7 @@
     "apexcharts",
     "ember-addon"
   ],
-  "repository": "apex",
+  "repository": "https://github.com/alex-jgr/ember-apexcharts.git",
   "license": "MIT",
   "author": "Grigore Alexandru Jucan",
   "directories": {
