@@ -20,11 +20,30 @@ export default Component.extend({
     // let apexchart = Ember.get(this, 'apexchart');
     let apexchart = get(this, 'apexchart');
 
-    console.log("[ APEXCHART ]", this.get('apexchart'));
     // let options = Ember.get(this, 'options');
     let options = get(this, 'options');
 
     let chart = apexchart.makeChart(this.get('element'), options);
     chart.render();
+  },
+  didReceiveAttrs() {
+    let apexchart = get(this, 'apexchart');
+    apexchart.updateData(get(this, 'options').series);
+  },
+  willUpdate () {
+    
+  },
+  willRender () {
+    
+  },
+  willDestroyElement () {
+    let apexchart = get(this, 'apexchart');
+    apexchart.destroyChart();
+  },
+  willClearRender () {
+    
+  },
+  didDestroyElement () {
+    
   }
 });

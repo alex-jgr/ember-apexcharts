@@ -8,7 +8,9 @@ export default Service.extend({
     getInstance () {
         return this;
     },
-
+    getChartInstance () {
+        return this.get('chart');
+    },
     makeChart (element, options ) {
         let chart = this.get('chart');
         if (!chart) {
@@ -17,6 +19,17 @@ export default Service.extend({
         }
         
         return chart;
+    },
+    updateData (data) {
+        let chart = this.get('chart');
+        if (chart) {
+            chart.updateSeries(data);
+        }
+    },
+    destroyChart () {
+        let chart = this.get('chart');
+        chart.destroy();
+        this.set('chart', null);
     },
 
     render () {
