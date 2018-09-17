@@ -1,6 +1,6 @@
 {
   "name": "ember-apexcharts",
-  "version": "0.0.2-alpha1",
+  "version": "0.0.1-alpha2",
   "description": "Integration of ApexCharts for Ember.js applications.",
   "keywords": [
     "chart",
