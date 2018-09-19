@@ -4,7 +4,7 @@ import { get, set } from '@ember/object';
 
 export default Service.extend({
     chart: null,
-
+    
     getInstance () {
         return this;
     },
@@ -26,12 +26,17 @@ export default Service.extend({
             chart.updateSeries(data);
         }
     },
+    updateOptions (options) {
+        let chart = this.get('chart');
+        if (chart) {
+            chart.updateOptions(options);
+        }
+    },
     destroyChart () {
         let chart = this.get('chart');
         chart.destroy();
         this.set('chart', null);
     },
-
     render () {
         let chart = get(this, 'chart');
         if (chart) {

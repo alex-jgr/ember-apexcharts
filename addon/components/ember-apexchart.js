@@ -28,7 +28,7 @@ export default Component.extend({
   },
   didReceiveAttrs() {
     let apexchart = get(this, 'apexchart');
-    apexchart.updateData(get(this, 'options').series);
+    apexchart.updateOptions(get(this, 'options'));
   },
   willUpdate () {
     
