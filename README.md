@@ -1,4 +1,4 @@
-ember-apexcharts
+This package hasn't been maintained for the last 7 years. Please use alternatives.
 ==============================================================================
 
 [Short description of the addon.]
